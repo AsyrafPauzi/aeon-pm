@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+      <meta name = "apple-mobile-web-app-capable" content = "yes" />
+      <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+      <title>AEON PM Checklist</title>
+     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+        <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body>
+      <div class = "views">
+         <div class = "view view-main">
+            <div class = "pages">
+               <div data-page = "home" class = "page navbar-fixed">
+                  
+                  <div class = "navbar">
+                     <div class = "navbar-inner">
+                        <div class = "left"> </div>
+                        <div class = "center">AEON PM Checklist</div>
+                        <div class = "right"> </div>
+                     </div>
+                  </div>
+                  
+                   <div class = "page-content">
+                              <div class="login-screen-title">
+                                 <img src="./images/logo.png" width="200px">
+                              </div>
+                              <form id = "my-form" class = "list-block">
+                                 <ul>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Store Type</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "store_type" placeholder = "Enter Store Type">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Store Code</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "store_code" placeholder = "Enter Store Code">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Department</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "department" placeholder = "Enter Department">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Location (Floor Level)</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "location" placeholder = "Enter Location">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Equipment</div>
+                                             <div class = "item-input">
+                                                <select name="equipment">
+                                                   <option>Please select</option>
+                                                   <option value="desktop">Desktop</option>
+                                                   <option value="laptop">Laptop</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">IP Address</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "ip_address" placeholder = "Enter IP Address">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Brand</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "brand" placeholder = "Enter Brand">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Model</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "model" placeholder = "Enter Model">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Computer Name</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "computer_name" placeholder = "Enter Computer Name">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Serial Number</div>
+                                                <div class="item-input">
+                                                <input type = "text" name = "serial_number" id='serial_number' placeholder="Enter serial Number">
+                                                <button type="button" id ="serial">Take Barcode</button>
+                                                <button type="button" id="ocr">OCR</button>
+                                                </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Monitor S/N</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "monitor_serial_number" placeholder = "Enter Monitor Serial Number">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Keyboard S/N</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "keyboard_serial_number" placeholder = "Enter Keyboard Serial Number">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Vinx Asset No (Desktop/Laptop)</div>
+                                             <div class = "item-input">
+                                                <select name="vinx_asset_no_dl">
+                                                   <option>Please select</option>
+                                                   <option value="desktop" >Desktop</option>
+                                                   <option value="laptop">Laptop</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Vinx Asset No - Monitor</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "vinx_asset_no_monitor" placeholder = "Enter Vinx Asset No - Monitor">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Vinx Asset No - Keyboard</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "vinx_asset_no_keyboard" placeholder = "Enter Vinx Asset No - Keyboard">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Remark</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "remark_vinx" placeholder = "Enter Remark Vinx">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">AEON Asset No - Desktop/Laptop</div>
+                                             <div class = "item-input">
+                                                <select name="aeon_asset_no_dl">
+                                                   <option>Please select</option>
+                                                   <option value="desktop" >Desktop</option>
+                                                   <option value="laptop">Laptop</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">AEON Asset No - Monitor</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "aeon_asset_no_monitor" placeholder = "Enter AEON Asset No - Monitor">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">AEON Asset No - Keyboard</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "aeon_asset_no_keyboard" placeholder = "Enter AEON Asset No - Keyboard">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Other Asset Tag (HP Logo Label)</div>
+                                             <div class = "item-input">
+                                                <select name="other_asset_tag">
+                                                   <option>Please select</option>
+                                                   <option value="yellow" >Yellow</option>
+                                                   <option value="red">red</option>
+                                                   <option value="white">White</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Remark</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "remark_aeon" placeholder = "Enter Remark AEON">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Windows OS Version</div>
+                                             <div class = "item-input">
+                                                <select name="windows_os_ver">
+                                                   <option>Please select</option>
+                                                   <option value="win7" >Windows 7</option>
+                                                   <option value="win10">Windows 10</option>
+                                                   <option value="winxp">Windows XP</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">MS Office Version</div>
+                                             <div class = "item-input">
+                                                <select name="ms_office_ver">
+                                                   <option>Please select</option>
+                                                   <option value="2007" >2007</option>
+                                                   <option value="2013">2013</option>
+                                                   <option value="2019">2019</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Remark</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "remark" placeholder = "Enter Remark">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">SCCM Installed</div>
+                                             <div class = "item-input">
+                                                <select name="sccm_installed">
+                                                   <option>Please select</option>
+                                                   <option value="yed" >YES</option>
+                                                   <option value="no">NO</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Update Status</div>
+                                             <div class = "item-input">
+                                                <select name="sccm_update_status">
+                                                   <option>Please select</option>
+                                                   <option value="green" >GREEN</option>
+                                                   <option value="red">RED</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Update During PM?</div>
+                                             <div class = "item-input">
+                                                <select name="sccm_update_during_pm">
+                                                   <option>Please select</option>
+                                                   <option value="yes" >YES</option>
+                                                   <option value="no">NO</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Microsoft End Point Installed?</div>
+                                             <div class = "item-input">
+                                                <select name="sccm_microsoft_end_point_installed">
+                                                   <option>Please select</option>
+                                                   <option value="yes" >YES</option>
+                                                   <option value="no">NO</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Other Antivirus Brand</div>
+                                             <div class = "item-input">
+                                                <select name="sccm_other_antivirus_brand">
+                                                   <option>Please select</option>
+                                                   <option value="yes" >YES</option>
+                                                   <option value="no">NO</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class = "item-content">
+                                          <div class = "item-inner">
+                                             <div class = "item-title label">Remarks</div>
+                                             <div class = "item-input">
+                                                <input type = "text" name = "remark_sccm" placeholder = "Enter Remarks">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </form>
+                              <div class = "content-block"><a href = "#" class = "button button-fill button-round color-blue form-to-json">Submit Checklist</a></div>
+                           </div>
+     
+               </div>
+            </div>
+         </div>
+      </div>     
+      <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>     
+      <script>
+         var myApp = new Framework7();
+         var $$ = Dom7;
+
+         $$(document).on('deviceready', function() {
+
+
+
+            console.log(navigator.notification);
+            console.log(navigator.camera);
+
+            console.log("Device is ready!");
+
+
+        });
+
+
+            //document.getElementById("serial_number").style.display = "none"; Temp remove
+
+             $$('#serial').on('click', function() {
+
+          cordova.plugins.barcodeScanner.scan(
+            function(result) {
+                if (!result.cancelled) {
+           
+
+                        var value = result.text;
+                        console.log(value);
+                        localStorage.setItem("serial Number", value);
+                        document.getElementById("serial_number").value = value;
+                        //document.getElementById("serial_number").style.display = "block"; Temp remove
+                        //document.getElementById("serial").style.display = "none"; Temp remove
+
+                }
+                return false;
+            },
+            function(error) {
+
+                function errorscan() {
+                }
+
+
+                navigator.notification.alert(
+                    'Scanning failed, please try again', // message
+                    errorscan, // callback
+                    'Error Scan', // title
+                    'Close' // buttonName
+                );
+
+            }
+        );
+        return false;
+      
+    });
+
+          
+            $$('.form-to-json').on('click', function() {
+            var formData = myApp.formToJSON('#my-form');
+            $$.ajax({
+                                        type: 'POST',
+                                        url: 'https://aeon-pm.herokuapp.com/api/v1/checklists',
+                                        dataType: 'json',
+                                        data: formData,
+                                        success: function(call, status) {
+
+                                            function successclockin() {
+
+                                            }
+
+
+                                            navigator.notification.alert(
+                                                'Success Submit Checklist', // message
+                                                successclockin, // callback
+                                                'Success', // title
+                                                'Close' // buttonName
+                                            );
+
+
+
+
+
+                                        },
+                                        error: function(call, status) {
+
+                                            function errorclockin() {
+
+                                            }
+
+
+                                            navigator.notification.alert(
+                                                'Error Submit Checklist', // message
+                                                errorclockin, // callback
+                                                'Error', // title
+                                                'Close' // buttonName
+                                            );
+
+                                        }
+                                    });
+         });
+      </script>
+      <script>
+      $$('#ocr').on('click', function(){
+         var language = "eng";
+         TesseractPlugin.loadLanguage(language, function(response) {
+            console.log(response)
+         }, function(reason) {
+            alert('Error on loading OCR file for your language. ' + reason);
+         });
+         navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL, allowEdit: true });
+         function onSuccess(imageData) {
+            var serial_number = document.getElementById('serial_number');
+            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
+               serial_number.value = recognizedText;
+            }, function(reason) {
+               alert('Error on recognizing text from image. ' + reason);
+            });
+         }
+
+         function onFail(message) {
+            alert('Failed because: ' + message);
+         }
+      })
+      </script>
+   </body>
+</html>
+
+ 

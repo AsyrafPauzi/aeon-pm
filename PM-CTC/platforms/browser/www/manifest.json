@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Aeon PM Checklist",
+  "short_name": "Aeon PM Checklist",
+  "version": "com.pm.app",
+  "description": "Preventive Maintainance For AEON / Vinx",
+  "author": "HSC Global Solution Team",
+  "icons": [],
+  "start_url": "index.html"
+}
