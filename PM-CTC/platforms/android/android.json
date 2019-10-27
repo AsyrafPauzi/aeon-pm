@@ -1,222 +1,206 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
-    },
-    "config_munge": {
-        "files": {
-            "res/xml/config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SpinnerDialog\"><param name=\"android-package\" value=\"hu.dpal.phonegap.plugins.SpinnerDialog\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"TesseractPlugin\"><param name=\"android-package\" value=\"com.gmazzoni.cordova.TesseractPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+              "count": 1
             },
-            "AndroidManifest.xml": {
-                "parents": {
-                    "/manifest/application": [
-                        {
-                            "xml": "<activity android:clearTaskOnLaunch=\"true\" android:configChanges=\"orientation|keyboardHidden|screenSize\" android:exported=\"false\" android:name=\"com.google.zxing.client.android.CaptureActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"stateAlwaysHidden\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<activity android:label=\"Share\" android:name=\"com.google.zxing.client.android.encode.EncodeActivity\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.FLASHLIGHT\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
-                        }
-                    ],
-                    "application": [
-                        {
-                            "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"org.apache.cordova.camera.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/camera_provider_paths\" /></provider>",
-                            "count": 1
-                        }
-                    ]
-                }
+            {
+              "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"TesseractPlugin\"><param name=\"android-package\" value=\"com.gmazzoni.cordova.TesseractPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
+              "count": 1
             }
+          ]
         }
-    },
-    "installed_plugins": {
-        "cordova-plugin-add-swift-support": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-spinner-dialog": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "phonegap-plugin-barcodescanner": {
-            "ANDROID_SUPPORT_V4_VERSION": "27.+",
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-tesseract": {
-            "PACKAGE_NAME": "com.pm.app"
-        },
-        "cordova-plugin-camera": {
-            "ANDROID_SUPPORT_V4_VERSION": "27.+",
-            "PACKAGE_NAME": "com.pm.app"
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            }
+          ],
+          "application": [
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"org.apache.cordova.camera.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/camera_provider_paths\" /></provider>",
+              "count": 1
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<activity android:clearTaskOnLaunch=\"true\" android:configChanges=\"orientation|keyboardHidden|screenSize\" android:exported=\"false\" android:name=\"com.google.zxing.client.android.CaptureActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"stateAlwaysHidden\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:label=\"Share\" android:name=\"com.google.zxing.client.android.encode.EncodeActivity\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.FLASHLIGHT\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
+              "count": 1
+            }
+          ]
         }
-    },
-    "dependent_plugins": {},
-    "modules": [
-        {
-            "id": "cordova-plugin-dialogs.notification",
-            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-            "pluginId": "cordova-plugin-dialogs",
-            "merges": [
-                "navigator.notification"
-            ]
-        },
-        {
-            "id": "cordova-plugin-dialogs.notification_android",
-            "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-            "pluginId": "cordova-plugin-dialogs",
-            "merges": [
-                "navigator.notification"
-            ]
-        },
-        {
-            "id": "cordova-plugin-inappbrowser.inappbrowser",
-            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-            "pluginId": "cordova-plugin-inappbrowser",
-            "clobbers": [
-                "cordova.InAppBrowser.open",
-                "window.open"
-            ]
-        },
-        {
-            "id": "cordova-plugin-spinner-dialog.SpinnerDialog",
-            "file": "plugins/cordova-plugin-spinner-dialog/www/spinner.js",
-            "pluginId": "cordova-plugin-spinner-dialog",
-            "merges": [
-                "window.plugins.spinnerDialog"
-            ]
-        },
-        {
-            "id": "cordova-plugin-statusbar.statusbar",
-            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-            "pluginId": "cordova-plugin-statusbar",
-            "clobbers": [
-                "window.StatusBar"
-            ]
-        },
-        {
-            "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
-            "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
-            "pluginId": "phonegap-plugin-barcodescanner",
-            "clobbers": [
-                "cordova.plugins.barcodeScanner"
-            ]
-        },
-        {
-            "id": "cordova-plugin-tesseract.TesseractPlugin",
-            "file": "plugins/cordova-plugin-tesseract/www/tesseractPlugin.js",
-            "pluginId": "cordova-plugin-tesseract",
-            "clobbers": [
-                "TesseractPlugin"
-            ]
-        },
-        {
-            "id": "cordova-plugin-camera.Camera",
-            "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-            "pluginId": "cordova-plugin-camera",
-            "clobbers": [
-                "Camera"
-            ]
-        },
-        {
-            "id": "cordova-plugin-camera.CameraPopoverOptions",
-            "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-            "pluginId": "cordova-plugin-camera",
-            "clobbers": [
-                "CameraPopoverOptions"
-            ]
-        },
-        {
-            "id": "cordova-plugin-camera.camera",
-            "file": "plugins/cordova-plugin-camera/www/Camera.js",
-            "pluginId": "cordova-plugin-camera",
-            "clobbers": [
-                "navigator.camera"
-            ]
-        },
-        {
-            "id": "cordova-plugin-camera.CameraPopoverHandle",
-            "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
-            "pluginId": "cordova-plugin-camera",
-            "clobbers": [
-                "CameraPopoverHandle"
-            ]
-        }
-    ],
-    "plugin_metadata": {
-        "cordova-plugin-add-swift-support": "2.0.2",
-        "cordova-plugin-dialogs": "2.0.2",
-        "cordova-plugin-inappbrowser": "3.0.0",
-        "cordova-plugin-spinner-dialog": "1.3.1",
-        "cordova-plugin-statusbar": "1.0.1",
-        "cordova-plugin-whitelist": "1.2.2",
-        "phonegap-plugin-barcodescanner": "8.0.1",
-        "cordova-plugin-tesseract": "0.0.1",
-        "cordova-plugin-camera": "4.1.0"
+      }
     }
+  },
+  "installed_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "cordova-plugin-tesseract": {
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.pm.app"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.pm.app"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-camera.Camera",
+      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "Camera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.CameraPopoverOptions",
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.camera",
+      "file": "plugins/cordova-plugin-camera/www/Camera.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "navigator.camera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.CameraPopoverHandle",
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverHandle"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification_android",
+      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
+    },
+    {
+      "id": "cordova-plugin-tesseract.TesseractPlugin",
+      "file": "plugins/cordova-plugin-tesseract/www/tesseractPlugin.js",
+      "pluginId": "cordova-plugin-tesseract",
+      "clobbers": [
+        "TesseractPlugin"
+      ]
+    },
+    {
+      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+      "pluginId": "phonegap-plugin-barcodescanner",
+      "clobbers": [
+        "cordova.plugins.barcodeScanner"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-add-swift-support": "2.0.2",
+    "cordova-plugin-camera": "4.1.0",
+    "cordova-plugin-dialogs": "2.0.2",
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-statusbar": "1.0.1",
+    "cordova-plugin-tesseract": "0.0.1",
+    "cordova-plugin-whitelist": "1.2.2",
+    "phonegap-plugin-barcodescanner": "8.0.1"
+  }
 }

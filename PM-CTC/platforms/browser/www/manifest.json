@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "Aeon PM Checklist",
   "short_name": "Aeon PM Checklist",
-  "version": "com.pm.app",
+  "version": "com.aeonpm.app",
   "description": "Preventive Maintainance For AEON / Vinx",
   "author": "HSC Global Solution Team",
   "icons": [],

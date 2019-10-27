@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "cordova-plugin-tesseract.TesseractPlugin",
-      "file": "plugins/cordova-plugin-tesseract/www/tesseractPlugin.js",
-      "pluginId": "cordova-plugin-tesseract",
-      "clobbers": [
-        "TesseractPlugin"
-      ]
-    },
-    {
       "id": "cordova-plugin-camera.Camera",
       "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
       "pluginId": "cordova-plugin-camera",
@@ -39,10 +31,57 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "CameraPopoverHandle"
       ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
+    },
+    {
+      "id": "cordova-plugin-tesseract.TesseractPlugin",
+      "file": "plugins/cordova-plugin-tesseract/www/tesseractPlugin.js",
+      "pluginId": "cordova-plugin-tesseract",
+      "clobbers": [
+        "TesseractPlugin"
+      ]
+    },
+    {
+      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+      "pluginId": "phonegap-plugin-barcodescanner",
+      "clobbers": [
+        "cordova.plugins.barcodeScanner"
+      ]
     }
   ];
   module.exports.metadata = {
+    "cordova-plugin-add-swift-support": "2.0.2",
+    "cordova-plugin-camera": "4.1.0",
+    "cordova-plugin-dialogs": "2.0.2",
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-tesseract": "0.0.1",
-    "cordova-plugin-camera": "4.1.0"
+    "cordova-plugin-whitelist": "1.2.2",
+    "phonegap-plugin-barcodescanner": "8.0.1"
   };
 });

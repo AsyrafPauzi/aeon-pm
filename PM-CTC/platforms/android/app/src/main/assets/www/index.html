@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <meta name = "viewport" content = "width = device-width, initial-scale = 1, 
-         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1,
+      maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
       <meta name = "apple-mobile-web-app-capable" content = "yes" />
       <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
       <title>AEON PM Checklist</title>
-     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-        <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+      <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+      <link rel="stylesheet" href="css/styles.css">
    </head>
    <body>
       <div class = "views">
@@ -24,497 +24,1264 @@
                      </div>
                   </div>
                   
-                   <div class = "page-content">
-                              <div class="login-screen-title">
-                                 <img src="./images/logo.png" width="200px">
-                              </div>
-                              <form id = "my-form" class = "list-block">
-                                 <ul>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Store Type</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "store_type" placeholder = "Enter Store Type">
-                                             </div>
-                                          </div>
+                  <div class = "page-content">
+                     <div class="login-screen-title">
+                        <img src="./images/logo.png" width="200px">
+                     </div>
+                     <form id = "my-form" class = "list-block">
+                        <div class="info-detail">
+                           <span>Mall / Store Details</span>
+                        </div>
+                        <div class="list inline-labels no-hairlines-md">
+                           <ul>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner-store-code">
+                                       <div class = "item-title label">State</div>
+                                       <div class="autocomplete item-input" >
+                                          <select name="state" id="state">
+                                             <option>Please select</option>
+                                             <option value="johor">JOHOR</option>
+                                             <option value="kedah">KEDAH</option>
+                                             <option value="kelantan">KELANTAN</option>
+                                             <option value="kuala lumpur">KUALA LUMPUR</option>
+                                             <option value="melaka">MELAKA</option>
+                                             <option value="negeri sembilan">NEGERI SEMBILAN</option>
+                                             <option value="pahang">PAHANG</option>
+                                             <option value="penang">PENANG</option>
+                                             <option value="perlis">PERLIS</option>
+                                             <option value="sabah">SABAH</option>
+                                             <option value="sarawak">SARAWAK</option>
+                                             <option value="selangor">SELANGOR</option>
+                                             <option value="terengganu">TERENGGANU</option>
+                                          </select>
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Store Code</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "store_code" placeholder = "Enter Store Code">
-                                             </div>
-                                          </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner-store-code">
+                                       <div class = "item-title label">Store Name</div>
+                                       <div class="autocomplete item-input" >
+                                          <input type="text" name="store_name" id="store_name" placeholder="Enter Store Name">
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Department</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "department" placeholder = "Enter Department">
-                                             </div>
-                                          </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Store Type</div>
+                                       <div class = "item-input">
+                                          <select name="store_type" id="store_type">
+                                             <option>Please select</option>
+                                             <option value="gms">GMS</option>
+                                             <option value="mall">MALL</option>
+                                             <option value="wellness">WELLNESS</option>
+                                             <option value="daiso">DAISO</option>
+                                             <option value="maxvalu">MAXVALU</option>
+                                             <option value="air on park">AIR ON PARK</option>
+                                             <option value="rocky base camp">ROCKY BASE CAMP</option>
+                                             <option value="warehouse">WAREHOUSE</option>
+                                             <option value="substores">SUBSTORES</option>
+                                             <option value="hq maluri">HQ MALURI</option>
+                                          </select>
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Location (Floor Level)</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "location" placeholder = "Enter Location">
-                                             </div>
-                                          </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner-store-code">
+                                       <div class = "item-title label">Store Code</div>
+                                       <div class="autocomplete item-input" >
+                                          <input id="myInput" type="text" name="store_code" id="store_code" placeholder="Enter Store Code">
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Equipment</div>
-                                             <div class = "item-input">
-                                                <select name="equipment">
-                                                   <option>Please select</option>
-                                                   <option value="desktop">Desktop</option>
-                                                   <option value="laptop">Laptop</option>
-                                                </select>
-                                             </div>
-                                          </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Department</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "department" id="department" placeholder = "Enter Department">
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">IP Address</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "ip_address" placeholder = "Enter IP Address">
-                                             </div>
-                                          </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Location / Floor</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "location_floor" id="location_floor" placeholder = "Enter Location / Floor">
                                        </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Brand</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "brand" placeholder = "Enter Brand">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Model</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "model" placeholder = "Enter Model">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Computer Name</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "computer_name" placeholder = "Enter Computer Name">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Serial Number</div>
-                                                <div class="item-input">
-                                                <input type = "text" name = "serial_number" id='serial_number' placeholder="Enter serial Number">
-                                                <button type="button" id ="serial">Take Barcode</button>
-                                                <button type="button" id="ocr">OCR</button>
-                                                </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Monitor S/N</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "monitor_serial_number" placeholder = "Enter Monitor Serial Number">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Keyboard S/N</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "keyboard_serial_number" placeholder = "Enter Keyboard Serial Number">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Vinx Asset No (Desktop/Laptop)</div>
-                                             <div class = "item-input">
-                                                <select name="vinx_asset_no_dl">
-                                                   <option>Please select</option>
-                                                   <option value="desktop" >Desktop</option>
-                                                   <option value="laptop">Laptop</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Vinx Asset No - Monitor</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "vinx_asset_no_monitor" placeholder = "Enter Vinx Asset No - Monitor">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Vinx Asset No - Keyboard</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "vinx_asset_no_keyboard" placeholder = "Enter Vinx Asset No - Keyboard">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Remark</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "remark_vinx" placeholder = "Enter Remark Vinx">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">AEON Asset No - Desktop/Laptop</div>
-                                             <div class = "item-input">
-                                                <select name="aeon_asset_no_dl">
-                                                   <option>Please select</option>
-                                                   <option value="desktop" >Desktop</option>
-                                                   <option value="laptop">Laptop</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">AEON Asset No - Monitor</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "aeon_asset_no_monitor" placeholder = "Enter AEON Asset No - Monitor">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">AEON Asset No - Keyboard</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "aeon_asset_no_keyboard" placeholder = "Enter AEON Asset No - Keyboard">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Other Asset Tag (HP Logo Label)</div>
-                                             <div class = "item-input">
-                                                <select name="other_asset_tag">
-                                                   <option>Please select</option>
-                                                   <option value="yellow" >Yellow</option>
-                                                   <option value="red">red</option>
-                                                   <option value="white">White</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Remark</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "remark_aeon" placeholder = "Enter Remark AEON">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Windows OS Version</div>
-                                             <div class = "item-input">
-                                                <select name="windows_os_ver">
-                                                   <option>Please select</option>
-                                                   <option value="win7" >Windows 7</option>
-                                                   <option value="win10">Windows 10</option>
-                                                   <option value="winxp">Windows XP</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">MS Office Version</div>
-                                             <div class = "item-input">
-                                                <select name="ms_office_ver">
-                                                   <option>Please select</option>
-                                                   <option value="2007" >2007</option>
-                                                   <option value="2013">2013</option>
-                                                   <option value="2019">2019</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Remark</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "remark" placeholder = "Enter Remark">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">SCCM Installed</div>
-                                             <div class = "item-input">
-                                                <select name="sccm_installed">
-                                                   <option>Please select</option>
-                                                   <option value="yed" >YES</option>
-                                                   <option value="no">NO</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Update Status</div>
-                                             <div class = "item-input">
-                                                <select name="sccm_update_status">
-                                                   <option>Please select</option>
-                                                   <option value="green" >GREEN</option>
-                                                   <option value="red">RED</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Update During PM?</div>
-                                             <div class = "item-input">
-                                                <select name="sccm_update_during_pm">
-                                                   <option>Please select</option>
-                                                   <option value="yes" >YES</option>
-                                                   <option value="no">NO</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Microsoft End Point Installed?</div>
-                                             <div class = "item-input">
-                                                <select name="sccm_microsoft_end_point_installed">
-                                                   <option>Please select</option>
-                                                   <option value="yes" >YES</option>
-                                                   <option value="no">NO</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Other Antivirus Brand</div>
-                                             <div class = "item-input">
-                                                <select name="sccm_other_antivirus_brand">
-                                                   <option>Please select</option>
-                                                   <option value="yes" >YES</option>
-                                                   <option value="no">NO</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li>
-                                       <div class = "item-content">
-                                          <div class = "item-inner">
-                                             <div class = "item-title label">Remarks</div>
-                                             <div class = "item-input">
-                                                <input type = "text" name = "remark_sccm" placeholder = "Enter Remarks">
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </li>
-                                 </ul>
-                              </form>
-                              <div class = "content-block"><a href = "#" class = "button button-fill button-round color-blue form-to-json">Submit Checklist</a></div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                          
+                           <div class="info-detail">
+                              <span>Computers Details</span>
                            </div>
-     
+                           <ul>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Equipment</div>
+                                       <div class = "item-input">
+                                          <select name="equipment" id="equipment">
+                                             <option>Please select</option>
+                                             <option value="desktop">Desktop</option>
+                                             <option value="laptop">Laptop</option>
+                                             <option value="server">Server</option>
+                                             <option value="ups">UPS</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Brand</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "brand" id="brand" placeholder = "Enter Brand">
+                                          <span class="input-clear-button"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Model</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "model" id="model" placeholder = "Enter Model">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Hostname </div>
+                                       <div class="item-input">
+                                          <input type = "text" name = "hostname" id='hostname' placeholder="Enter Hostname">
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">IP Address</div>
+                                       <div class = "item-input">
+                                          <input type="text" name = "ip_address" id='ip_address' placeholder = "Enter IP Address" required validate pattern="[0-9]*" data-error-message="Only numbers please!">
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Computer S/N</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "computer_serial_number" id="computer_serial_number" required validate pattern="[A-Z0-9]+"  placeholder = "Enter Computer Serial Number">
+                                          <a id ="computer_serial" class="button button-fill color-grey barcode">Barcode</a>
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Photo Evidence</div>
+                                       <div class = "item-input">
+                                           <a class ="button button-fill color-grey" id ="capturePhoto1" >Capture Photo</a>
+                                            <input type = "hidden" name = "image1" id="image1">
+                                            <img style="display:none;width: 300px;height: 300px;" id="myImage1" src="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Monitor S/N</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "monitor_serial_number" id="monitor_serial_number"  required validate pattern="[A-Z0-9]"  placeholder = "Enter Monitor Serial Number">
+                                          <a  id ="monitor_serial" class="button button-fill color-grey barcode">Barcode</a>
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Keyboard S/N</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "keyboard_serial_number" id="keyboard_serial_number"  required validate pattern="[A-Z0-9]" placeholder = "Enter Keyboard Serial Number">
+                                          <a  id ="keyboard_serial" class="button button-fill color-grey barcode">Barcode</a>
+                                       
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                            
+                           <div class="info-detail">
+                              <span>Asset Information</span>
+                           </div>
+                           <ul>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Vinx Asset Tag</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "vinx_asset_tag" id="vinx_asset_tag" placeholder = "Enter Vinx Asset Tag">
+                                          <a  id ="vinx_asset" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Vinx Asset Tag Monitor</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "vinx_asset_tag_monitor" id="vinx_asset_tag_monitor" placeholder = "Enter Vinx Asset Tag Monitor">
+                                          <a  id ="vinx_asset_tag_monitor_sn" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Vinx Asset Tag Keyboard</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "vinx_asset_tag_keyboard" id="vinx_asset_tag_keyboard" placeholder = "Enter Vinx Asset Tag Keyboard">
+                                          <a  id ="vinx_asset_tag_keyboard_sn" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Aeon Asset Tag</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "aeon_asset_tag " id="aeon_asset_tag" placeholder = "Enter Aeon Asset Tag">
+                                          <a  id ="aeon_asset" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Aeon Asset Tag Monitor</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "aeon_asset_tag_monitor" id="aeon_asset_tag_monitor" placeholder = "Enter Aeon Asset Tag Monitor">
+                                          <a  id ="aeon_asset_tag_monitor_sn" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Aeon Asset Tag Keyboard</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "aeon_asset_tag_keyboard" id="aeon_asset_tag_keyboard" placeholder = "Enter Aeon Asset Tag Keyboard">
+                                          <a  id ="aeon_asset_tag_keyboard_sn" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Others Asset Tag</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "others_asset_tag" id="others_asset_tag" placeholder = "Enter Others Asset Tag">
+                                          <a  id ="others_asset" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Others Asset Tag Monitor</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "others_asset_tag_monitor" id="others_asset_tag_monitor" placeholder = "Enter Others Asset Tag Monitor">
+                                          <a  id ="others_asset_tag_monitor_sn" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Others Asset Tag Keyboard</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "others_asset_tag_keyboard" id="others_asset_tag_keyboard" placeholder = "Enter Others Asset Tag Keyboard">
+                                          <a  id ="others_asset_tag_keyboard_sn" class="button button-fill color-grey barcode">Barcode</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Asset Tag Remark</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "asset_tag_remark" id="asset_tag_remark" placeholder = "Enter Asset Tag Remark">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Asset Tag Photo</div>
+                                       <div class = "item-input">
+                                           <a class ="button button-fill color-grey" id ="capturePhoto2" >Capture Photo</a>
+                                            <input type = "hidden" name = "image2" id="image2">
+                                            <img style="display:none;width: 300px;height: 300px;" id="myImage2" src="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                           <div class="info-detail">
+                              <span>Software Information</span>
+                           </div>
+                           <ul>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Windows OS Version</div>
+                                       <div class = "item-input">
+                                          <select name="windows_os_ver" id="windows_os_ver">
+                                             <option>Please select</option>
+                                             <option value="win7" >Windows 7</option>
+                                             <option value="win10">Windows 10</option>
+                                             <option value="winxp">Windows XP</option>
+                                             <option value="others">Others</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">MS Office Version</div>
+                                       <div class = "item-input">
+                                          <select name="ms_office_ver" id="ms_office_ver">
+                                             <option>Please select</option>
+                                             <option value="2007" >2007</option>
+                                             <option value="2013">2013</option>
+                                             <option value="2013">2016</option>
+                                             <option value="2019">2019</option>
+                                             <option value="others">Others</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">SCCM Installed?</div>
+                                       <div class = "item-input">
+                                          <select name="sccm_installed" id="sccm_installed">
+                                             <option>Please select</option>
+                                             <option value="yed" >YES</option>
+                                             <option value="no">NO</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">SCCM Update Status?</div>
+                                       <div class = "item-input">
+                                          <select name="sccm_update_status" id="sccm_update_status">
+                                             <option>Please select</option>
+                                             <option value="yes" >YES</option>
+                                             <option value="no">NO</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Update During PM?</div>
+                                       <div class = "item-input">
+                                          <select name="sccm_update_during_pm" id="sccm_update_during_pm">
+                                             <option>Please select</option>
+                                             <option value="yes" >YES</option>
+                                             <option value="no">NO</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">End Point Protection Up-to-date?</div>
+                                       <div class = "item-input">
+                                          <select name="sccm_end_point_protection" id="sccm_end_point_protection">
+                                             <option>Please select</option>
+                                             <option value="yes" >YES</option>
+                                             <option value="no">NO</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Others AV Brand?</div>
+                                       <div class = "item-input">
+                                          <select name="sccm_others_av_brand" id="sccm_others_av_brand">
+                                             <option>Please select</option>
+                                             <option value="yes" >YES</option>
+                                             <option value="no">NO</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                            <div class="info-detail">
+                              <span>Engineer Information</span>
+                           </div>
+                           <ul>
+                              <li>
+                                 <div class = "item-content">
+                                    <div class = "item-inner">
+                                       <div class = "item-title label">Engineer Name</div>
+                                       <div class = "item-input">
+                                          <input type = "text" name = "engineer_name" id="engineer_name" placeholder = "Enter Engineer Name">
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </form>
+                     <div class = "content-block"><a href = "#" id="review-checklist" class = "button button-fill button-round color-yellow ">Review Checklist</a></div>
+                     <div class = "content-block"><a href = "#" id="edit-checklist"  style="display: none;" class = "button button-fill button-round color-green ">Edit Checklist</a></div>
+                     <div class = "content-block"><a href = "#" style="display: none;"  id="form-button" class = "button button-fill button-round color-blue form-to-json">Submit Checklist</a></div>
+                          <br>
+                             
+
+                  </div>
+                  
                </div>
             </div>
          </div>
-      </div>     
+      </div>
       <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>     
-      <script>
+      <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+<script>
          var myApp = new Framework7();
          var $$ = Dom7;
-
          $$(document).on('deviceready', function() {
+            
+         function autocomplete(inp, arr) {
+         /*the autocomplete function takes two arguments,
+         the text field element and an array of possible autocompleted values:*/
+         var currentFocus;
+         /*execute a function when someone writes in the text field:*/
+         inp.addEventListener("input", function(e) {
+         var a, b, i, val = this.value;
+         /*close any already open lists of autocompleted values*/
+         closeAllLists();
+         if (!val) { return false;}
+         currentFocus = -1;
+         /*create a DIV element that will contain the items (values):*/
+         a = document.createElement("DIV");
+         a.setAttribute("id", this.id + "autocomplete-list");
+         a.setAttribute("class", "autocomplete-items");
+         /*append the DIV element as a child of the autocomplete container:*/
+         this.parentNode.appendChild(a);
+         /*for each item in the array...*/
+         for (i = 0; i < arr.length; i++) {
+         /*check if the item starts with the same letters as the text field value:*/
+         if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+         /*create a DIV element for each matching element:*/
+         b = document.createElement("DIV");
+         /*make the matching letters bold:*/
+         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+         b.innerHTML += arr[i].substr(val.length);
+         /*insert a input field that will hold the current array item's value:*/
+         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+         /*execute a function when someone clicks on the item value (DIV element):*/
+         b.addEventListener("click", function(e) {
+         /*insert the value for the autocomplete text field:*/
+         inp.value = this.getElementsByTagName("input")[0].value;
+         /*close the list of autocompleted values,
+         (or any other open lists of autocompleted values:*/
+         closeAllLists();
+         });
+         a.appendChild(b);
+         }
+         }
+         });
+         /*execute a function presses a key on the keyboard:*/
+         inp.addEventListener("keydown", function(e) {
+         var x = document.getElementById(this.id + "autocomplete-list");
+         if (x) x = x.getElementsByTagName("div");
+         if (e.keyCode == 40) {
+         /*If the arrow DOWN key is pressed,
+         increase the currentFocus variable:*/
+         currentFocus++;
+         /*and and make the current item more visible:*/
+         addActive(x);
+         } else if (e.keyCode == 38) { //up
+         /*If the arrow UP key is pressed,
+         decrease the currentFocus variable:*/
+         currentFocus--;
+         /*and and make the current item more visible:*/
+         addActive(x);
+         } else if (e.keyCode == 13) {
+         /*If the ENTER key is pressed, prevent the form from being submitted,*/
+         e.preventDefault();
+         if (currentFocus > -1) {
+         /*and simulate a click on the "active" item:*/
+         if (x) x[currentFocus].click();
+         }
+         }
+         });
+         function addActive(x) {
+         /*a function to classify an item as "active":*/
+         if (!x) return false;
+         /*start by removing the "active" class on all items:*/
+         removeActive(x);
+         if (currentFocus >= x.length) currentFocus = 0;
+         if (currentFocus < 0) currentFocus = (x.length - 1);
+         /*add class "autocomplete-active":*/
+         x[currentFocus].classList.add("autocomplete-active");
+         }
+         function removeActive(x) {
+         /*a function to remove the "active" class from all autocomplete items:*/
+         for (var i = 0; i < x.length; i++) {
+         x[i].classList.remove("autocomplete-active");
+         }
+         }
+         function closeAllLists(elmnt) {
+         /*close all autocomplete lists in the document,
+         except the one passed as an argument:*/
+         var x = document.getElementsByClassName("autocomplete-items");
+         for (var i = 0; i < x.length; i++) {
+         if (elmnt != x[i] && elmnt != inp) {
+         x[i].parentNode.removeChild(x[i]);
+         }
+         }
+         }
+         /*execute a function when someone clicks in the document:*/
+         document.addEventListener("click", function (e) {
+         closeAllLists(e.target);
+         });
+         }
+         /*An array containing all the country names in the world:*/
+         var countries = ["1001","1002","1003","1004","1005","1006","1007 & 1008","1009","1010","1011","1012","1013","1014","1015","1016","1017","1018","1019","1020","1021","1022","1023","1024","1025","1026","1027","1028","1029","1030","1031","1032","1033","1034","1035","1036","1037","1038","1039","1040","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037","2038","2039","2040","3009","3011","3012","3013","3015","3016","3017","3018","4003","4202","5005","5006","5007","5008","5009","5010","Chad","Chile","5011","5013","5014","5015","5016","5017","5018","5019","5022","5023","5024","5025","5026","5027","5028","5029","5032","5035","5036","5037","5040","5043","5047","5048","5049","5050","5051","5052","5053","5054","5055","5056","5057","5058","5059","5060","5061","5062","5063","5064","5065","5066","5067","5068","5069","5070","5071","5072","5073","5074","5075","5076","5077","5078","5079","5081","5084","5085","5086","5087","5088","5090","5092","5093","5094","5098","5101","5102","5103","5104","5105","5107","5108","5109","5111","5112","5113","5115","5116","Malawi","5118","5119","5120","5121","5122","5123","5124","5126","5127","5128","5129","5130","5131","5132","5133","5135","5136","5137","5138","5139","5140","5141 5143","5146","5148","5149","5151","5154","5601","5603","5701","5702","5703","8008","8017","8018","9000","8010 ","8011","8012"];
+         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+         autocomplete(document.getElementById("myInput"), countries);
 
+       console.log(navigator.notification);
+       console.log(navigator.camera);
+       console.log("Device is ready!");
+      });
+</script>
+<script type="text/javascript">
 
+   $$('#computer_serial').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
 
-            console.log(navigator.notification);
-            console.log(navigator.camera);
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("computer_serial_number", value);
+                   document.getElementById("computer_serial_number").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
 
-            console.log("Device is ready!");
+   });
 
+   $$('#monitor_serial').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
 
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("monitor_serial_number", value);
+                   document.getElementById("monitor_serial_number").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#keyboard_serial').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("keyboard_serial_number", value);
+                   document.getElementById("keyboard_serial_number").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#vinx_asset').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("vinx_asset_tag", value);
+                   document.getElementById("vinx_asset_tag").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#vinx_asset_tag_monitor_sn').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("vinx_asset_tag_monitor", value);
+                   document.getElementById("vinx_asset_tag_monitor").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#vinx_asset_tag_keyboard_sn').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("vinx_asset_tag_keyboard", value);
+                   document.getElementById("vinx_asset_tag_keyboard").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#aeon_asset').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("aeon_asset_tag", value);
+                   document.getElementById("aeon_asset_tag").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#aeon_asset_tag_monitor_sn').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("aeon_asset_tag_monitor", value);
+                   document.getElementById("aeon_asset_tag_monitor").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#aeon_asset_tag_keyboard_sn').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("aeon_asset_tag_keyboard", value);
+                   document.getElementById("aeon_asset_tag_keyboard").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#others_asset').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("others_asset_tag", value);
+                   document.getElementById("others_asset_tag").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#others_asset_tag_monitor_sn').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("others_asset_tag_monitor", value);
+                   document.getElementById("others_asset_tag_monitor").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   $$('#others_asset_tag_keyboard_sn').on('click', function() {
+       cordova.plugins.barcodeScanner.scan(
+           function(result) {
+               if (!result.cancelled) {
+
+                   var value = result.text;
+                   console.log(value);
+                   localStorage.setItem("others_asset_tag_keyboard", value);
+                   document.getElementById("others_asset_tag_keyboard").value = value;
+                   //document.getElementById("serial_number").style.display = "block"; Temp remove
+                   //document.getElementById("serial").style.display = "none"; Temp remove
+               }
+               return false;
+           },
+           function(error) {
+               function errorscan() {}
+               navigator.notification.alert(
+                   'Scanning failed, please try again', // message
+                   errorscan, // callback
+                   'Error Scan', // title
+                   'Close' // buttonName
+               );
+           }
+       );
+       return false;
+
+   });
+
+   
+
+</script>
+
+<script >
+    $$('#ocr-hostname').on('click', function() {
+        var language = "eng";
+        TesseractPlugin.loadLanguage(language, function(response) {
+            console.log(response)
+        }, function(reason) {
+            alert('Error on loading OCR file for your language. ' + reason);
+        });
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL,
+            allowEdit: true
         });
 
+        function onSuccess(imageData) {
+            var hostname = document.getElementById('hostname');
+            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
+                hostname.value = recognizedText;
+            }, function(reason) {
+                alert('Error on recognizing text from image. ' + reason);
+            });
+        }
 
-            //document.getElementById("serial_number").style.display = "none"; Temp remove
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    })
 
-             $$('#serial').on('click', function() {
+    $$('#ocr-ip_address').on('click', function() {
+        var language = "eng";
+        TesseractPlugin.loadLanguage(language, function(response) {
+            console.log(response)
+        }, function(reason) {
+            alert('Error on loading OCR file for your language. ' + reason);
+        });
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL,
+            allowEdit: true
+        });
 
-          cordova.plugins.barcodeScanner.scan(
-            function(result) {
-                if (!result.cancelled) {
-           
+        function onSuccess(imageData) {
+            var ip_address = document.getElementById('ip_address');
+            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
+                ip_address.value = recognizedText;
+            }, function(reason) {
+                alert('Error on recognizing text from image. ' + reason);
+            });
+        }
 
-                        var value = result.text;
-                        console.log(value);
-                        localStorage.setItem("serial Number", value);
-                        document.getElementById("serial_number").value = value;
-                        //document.getElementById("serial_number").style.display = "block"; Temp remove
-                        //document.getElementById("serial").style.display = "none"; Temp remove
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    })
 
-                }
-                return false;
-            },
-            function(error) {
+    $$('#ocr-computer_serial').on('click', function() {
+        var language = "eng";
+        TesseractPlugin.loadLanguage(language, function(response) {
+            console.log(response)
+        }, function(reason) {
+            alert('Error on loading OCR file for your language. ' + reason);
+        });
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL,
+            allowEdit: true
+        });
 
-                function errorscan() {
-                }
+        function onSuccess(imageData) {
+            var computer_serial_number = document.getElementById('computer_serial_number');
+            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
+                computer_serial_number.value = recognizedText;
+            }, function(reason) {
+                alert('Error on recognizing text from image. ' + reason);
+            });
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    })
+
+    $$('#ocr-monitor_serial').on('click', function() {
+        var language = "eng";
+        TesseractPlugin.loadLanguage(language, function(response) {
+            console.log(response)
+        }, function(reason) {
+            alert('Error on loading OCR file for your language. ' + reason);
+        });
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL,
+            allowEdit: true
+        });
+
+        function onSuccess(imageData) {
+            var monitor_serial_number = document.getElementById('monitor_serial_number');
+            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
+                monitor_serial_number.value = recognizedText;
+            }, function(reason) {
+                alert('Error on recognizing text from image. ' + reason);
+            });
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    })
+
+    $$('#ocr-keyboard_serial').on('click', function() {
+        var language = "eng";
+        TesseractPlugin.loadLanguage(language, function(response) {
+            console.log(response)
+        }, function(reason) {
+            alert('Error on loading OCR file for your language. ' + reason);
+        });
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL,
+            allowEdit: true
+        });
+
+        function onSuccess(imageData) {
+            var keyboard_serial_number = document.getElementById('keyboard_serial_number');
+            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
+                keyboard_serial_number.value = recognizedText;
+            }, function(reason) {
+                alert('Error on recognizing text from image. ' + reason);
+            });
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    })
+</script>
+
+<script type="text/javascript">
 
 
-                navigator.notification.alert(
-                    'Scanning failed, please try again', // message
-                    errorscan, // callback
-                    'Error Scan', // title
-                    'Close' // buttonName
-                );
 
-            }
-        );
-        return false;
+   
+
+   $$('#review-checklist').on('click', function() {
+
+      $$('#sccm_others_av_brand').attr('readonly', true);
+      $$('#sccm_end_point_protection').attr('readonly', true);
+      $$('#sccm_update_during_pm').attr('readonly', true);
+      $$('#sccm_update_status').attr('readonly', true);
+      $$('#sccm_installed').attr('readonly', true);
+      $$('#ms_office_ver').attr('readonly', true);
+      $$('#windows_os_ver').attr('readonly', true);
+      $$('#asset_tag_remark').attr('readonly', true);
+      $$('#others_asset_tag').attr('readonly', true);
+      $$('#others_asset_tag_monitor').attr('readonly', true);
+      $$('#others_asset_tag_keyboard').attr('readonly', true);
+      $$('#aeon_asset_tag').attr('readonly', true);
+      $$('#aeon_asset_tag_monitor').attr('readonly', true);
+      $$('#aeon_asset_tag_keyboard').attr('readonly', true);
+      $$('#vinx_asset_tag').attr('readonly', true);
+      $$('#vinx_asset_tag_monitor').attr('readonly', true);
+      $$('#vinx_asset_tag_keyboard').attr('readonly', true);
+      $$('#keyboard_serial_number').attr('readonly', true);
+      $$('#monitor_serial_number').attr('readonly', true);
+      $$('#computer_serial_number').attr('readonly', true);
+      $$('#ip_address').attr('readonly', true);
+      $$('#hostname').attr('readonly', true);
+      $$('#model').attr('readonly', true);
+      $$('#brand').attr('readonly', true);
+      $$('#equipment').attr('readonly', true);
+      $$('#location_floor').attr('readonly', true);
+      $$('#department').attr('readonly', true);
+      $$('#store_code').attr('readonly', true);
+      $$('#store_type').attr('readonly', true);
+      $$('#store_name').attr('readonly', true);
+      $$('#state').attr('readonly', true);
+      $$('#engineer_name').attr('readonly', true);
+      var x = document.getElementById("form-button");
+       x.style.display = "block";
+        var y = document.getElementById("edit-checklist");
+       y.style.display = "block";
+       var z = document.getElementById("review-checklist");
+       z.style.display = "none";
+   }); 
+
+   $$('#edit-checklist').on('click', function() {
       
+      $$('#sccm_others_av_brand').removeAttr('readonly');
+      $$('#sccm_end_point_protection').removeAttr('readonly');
+      $$('#sccm_update_during_pm').removeAttr('readonly');
+      $$('#sccm_update_status').removeAttr('readonly');
+      $$('#sccm_installed').removeAttr('readonly');
+      $$('#ms_office_ver').removeAttr('readonly');
+      $$('#windows_os_ver').removeAttr('readonly');
+      $$('#asset_tag_remark').removeAttr('readonly');
+      $$('#others_asset_tag').removeAttr('readonly');
+      $$('#others_asset_tag_monitor').removeAttr('readonly');
+      $$('#others_asset_tag_keyboard').removeAttr('readonly');
+      $$('#aeon_asset_tag').removeAttr('readonly');
+      $$('#aeon_asset_tag_monitor').removeAttr('readonly');
+      $$('#aeon_asset_tag_keyboard').removeAttr('readonly');
+      $$('#vinx_asset_tag').removeAttr('readonly');
+      $$('#vinx_asset_tag_monitor').removeAttr('readonly');
+      $$('#vinx_asset_tag_keyboard').removeAttr('readonly');
+      $$('#keyboard_serial_number').removeAttr('readonly');
+      $$('#monitor_serial_number').removeAttr('readonly');
+      $$('#computer_serial_number').removeAttr('readonly');
+      $$('#ip_address').removeAttr('readonly');
+      $$('#hostname').removeAttr('readonly');
+      $$('#model').removeAttr('readonly');
+      $$('#brand').removeAttr('readonly');
+      $$('#equipment').removeAttr('readonly');
+      $$('#location_floor').removeAttr('readonly');
+      $$('#department').removeAttr('readonly');
+      $$('#store_code').removeAttr('readonly');
+      $$('#store_type').removeAttr('readonly');
+      $$('#engineer_name').removeAttr('readonly');
+      $$('#store_name').removeAttr('readonly');
+      $$('#state').removeAttr('readonly');
+      var x = document.getElementById("form-button");
+       x.style.display = "none";
+        var y = document.getElementById("edit-checklist");
+       y.style.display = "none";
+       var z = document.getElementById("review-checklist");
+       z.style.display = "block";
+   }); 
+
+
+   $$('.form-to-json').on('click', function() {
+
+      $$(this).attr("disabled", true);
+       var formData = myApp.formToJSON('#my-form');
+       $$.ajax({
+           type: 'POST',
+           url: 'https://aeon-pm.herokuapp.com/api/v1/checklists',
+           dataType: 'json',
+           data: formData,
+           success: function(call, status) {
+               function successclockin() 
+               {
+                  $$(".form-to-json").removeAttr('disabled');
+                  window.location = "index.html";
+
+               }
+               navigator.notification.alert(
+                   'Success Submit Checklist', // message
+                   successclockin, // callback
+                   'Success', // title
+                   'Close' // buttonName
+               );
+           },
+           error: function(call, status) {
+               function errorclockin() {
+
+                  $$(".form-to-json").removeAttr('disabled');
+               }
+               navigator.notification.alert(
+                   'Error Submit Checklist', // message
+                   errorclockin, // callback
+                   'Error', // title
+                   'Close' // buttonName
+               );
+           }
+       });
+   }); 
+</script> 
+
+ <script type="text/javascript" charset="utf-8">
+
+
+
+    $$('#capturePhoto1').on('click', function() {
+
+        if (typeof navigator !== 'undefined' && typeof navigator.camera !== 'undefined') {
+            // Take picture using device camera and retrieve image as base64-encoded string
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 50,
+               correctOrientation: true,
+                destinationType: Camera.DestinationType.DATA_URL
+            });
+
+            function onSuccess(imageData) {
+                var image = document.getElementById('myImage1');
+               image.src = "data:image/jpeg;base64," + imageData;
+               document.getElementById("myImage1").style.display = "block";
+                document.getElementById("image1").value = "data:image/jpeg;base64," + imageData;
+            }
+
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+
+        } else {
+            alert('no navigator.camera - did you install the plugin?');
+        }
+
+
     });
 
-          
-            $$('.form-to-json').on('click', function() {
-            var formData = myApp.formToJSON('#my-form');
-            $$.ajax({
-                                        type: 'POST',
-                                        url: 'https://aeon-pm.herokuapp.com/api/v1/checklists',
-                                        dataType: 'json',
-                                        data: formData,
-                                        success: function(call, status) {
+    $$('#capturePhoto2').on('click', function() {
 
-                                            function successclockin() {
-
-                                            }
-
-
-                                            navigator.notification.alert(
-                                                'Success Submit Checklist', // message
-                                                successclockin, // callback
-                                                'Success', // title
-                                                'Close' // buttonName
-                                            );
-
-
-
-
-
-                                        },
-                                        error: function(call, status) {
-
-                                            function errorclockin() {
-
-                                            }
-
-
-                                            navigator.notification.alert(
-                                                'Error Submit Checklist', // message
-                                                errorclockin, // callback
-                                                'Error', // title
-                                                'Close' // buttonName
-                                            );
-
-                                        }
-                                    });
-         });
-      </script>
-      <script>
-      $$('#ocr').on('click', function(){
-         var language = "eng";
-         TesseractPlugin.loadLanguage(language, function(response) {
-            console.log(response)
-         }, function(reason) {
-            alert('Error on loading OCR file for your language. ' + reason);
-         });
-         navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-            destinationType: Camera.DestinationType.DATA_URL, allowEdit: true });
-         function onSuccess(imageData) {
-            var serial_number = document.getElementById('serial_number');
-            TesseractPlugin.recognizeText(imageData, language, function(recognizedText) {
-               serial_number.value = recognizedText;
-            }, function(reason) {
-               alert('Error on recognizing text from image. ' + reason);
+        if (typeof navigator !== 'undefined' && typeof navigator.camera !== 'undefined') {
+            // Take picture using device camera and retrieve image as base64-encoded string
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 50,
+               correctOrientation: true,
+                destinationType: Camera.DestinationType.DATA_URL
             });
-         }
 
-         function onFail(message) {
-            alert('Failed because: ' + message);
-         }
-      })
-      </script>
+            function onSuccess(imageData) {
+                var image = document.getElementById('myImage2');
+               image.src = "data:image/jpeg;base64," + imageData;
+               document.getElementById("myImage2").style.display = "block";
+                document.getElementById("image2").value = "data:image/jpeg;base64," + imageData;
+            }
+
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+
+        } else {
+            alert('no navigator.camera - did you install the plugin?');
+        }
+
+
+    });
+
+    </script>
    </body>
 </html>
-
- 

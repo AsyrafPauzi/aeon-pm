@@ -32,14 +32,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-spinner-dialog/www/spinner.js",
-        "id": "cordova-plugin-spinner-dialog.SpinnerDialog",
-        "pluginId": "cordova-plugin-spinner-dialog",
-        "merges": [
-            "window.plugins.spinnerDialog"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
@@ -106,7 +98,6 @@ module.exports.metadata =
     "cordova-plugin-add-swift-support": "2.0.2",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-inappbrowser": "3.0.0",
-    "cordova-plugin-spinner-dialog": "1.3.1",
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-barcodescanner": "8.0.1",

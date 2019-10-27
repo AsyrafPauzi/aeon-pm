@@ -32,37 +32,6 @@ $$(document).on('deviceready', function() {
 myApp.onPageInit('index', function(page) {
 
 
-     $$('#serial').on('click', function() {
-
-        alert("test");
-
-      
-    });
-            $$('.form-to-json').on('click', function() {
-            var formData = myApp.formToJSON('#my-form');
-            alert(JSON.stringify(formData));
 
 
-         });
-
-    document.getElementById("cameraTakePicture").addEventListener("click", cameraTakePicture);
-
-    function cameraTakePicture() {
-        navigator.camera.getPicture(onSuccess, onFail, {
-            quality: 50,
-            destinationType: Camera.DestinationType.DATA_URL
-        });
-
-        function onSuccess(imageData) {
-            var image = document.getElementById('myImage');
-            image.src = "data:image/jpeg;base64," + imageData;
-        }
-
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
-    }
-
-
-
-})
+});
