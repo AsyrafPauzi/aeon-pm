@@ -9,31 +9,34 @@
   "installed_plugins": {
     "cordova-plugin-camera": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     },
     "cordova-plugin-tesseract": {
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     },
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-add-swift-support": {
-      "PACKAGE_NAME": "com.pm.app"
+      "PACKAGE_NAME": "com.aeonpm.app"
+    },
+    "cordova-plugin-spinner-dialog": {
+      "PACKAGE_NAME": "com.aeonpm.app"
     }
   }
 }

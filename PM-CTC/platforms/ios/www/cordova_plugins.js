@@ -50,6 +50,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-spinner-dialog.SpinnerDialog",
+      "file": "plugins/cordova-plugin-spinner-dialog/www/spinner.js",
+      "pluginId": "cordova-plugin-spinner-dialog",
+      "merges": [
+        "window.plugins.spinnerDialog"
+      ]
+    },
+    {
       "id": "cordova-plugin-statusbar.statusbar",
       "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
       "pluginId": "cordova-plugin-statusbar",
@@ -79,6 +87,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-spinner-dialog": "1.3.1",
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-tesseract": "0.0.1",
     "cordova-plugin-whitelist": "1.2.2",
