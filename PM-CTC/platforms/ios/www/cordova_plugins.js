@@ -66,14 +66,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-tesseract.TesseractPlugin",
-      "file": "plugins/cordova-plugin-tesseract/www/tesseractPlugin.js",
-      "pluginId": "cordova-plugin-tesseract",
-      "clobbers": [
-        "TesseractPlugin"
-      ]
-    },
-    {
       "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
       "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
       "pluginId": "phonegap-plugin-barcodescanner",
@@ -89,7 +81,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-inappbrowser": "3.0.0",
     "cordova-plugin-spinner-dialog": "1.3.1",
     "cordova-plugin-statusbar": "1.0.1",
-    "cordova-plugin-tesseract": "0.0.1",
     "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-barcodescanner": "8.0.1"
   };

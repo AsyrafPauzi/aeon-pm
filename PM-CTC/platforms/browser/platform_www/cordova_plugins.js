@@ -54,14 +54,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-tesseract/www/tesseractPlugin.js",
-        "id": "cordova-plugin-tesseract.TesseractPlugin",
-        "pluginId": "cordova-plugin-tesseract",
-        "clobbers": [
-            "TesseractPlugin"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "id": "cordova-plugin-camera.Camera",
         "pluginId": "cordova-plugin-camera",
@@ -101,7 +93,6 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-barcodescanner": "8.0.1",
-    "cordova-plugin-tesseract": "0.0.1",
     "cordova-plugin-camera": "4.1.0"
 }
 // BOTTOM OF METADATA

@@ -20,9 +20,6 @@
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.aeonpm.app"
     },
-    "cordova-plugin-tesseract": {
-      "PACKAGE_NAME": "com.aeonpm.app"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.aeonpm.app"
     },

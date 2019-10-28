@@ -22,9 +22,6 @@
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.pm.app"
     },
-    "cordova-plugin-tesseract": {
-      "PACKAGE_NAME": "com.pm.app"
-    },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.pm.app"
     }

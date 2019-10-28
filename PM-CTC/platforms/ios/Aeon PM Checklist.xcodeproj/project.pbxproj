@@ -25,9 +25,6 @@
 		4E2E16ED37DC48FF97953737 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1128FC09A84F93841E5814 /* CDVInAppBrowser.m */; };
 		ED08549D368045FAB0C69327 /* CDVSpinnerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A27101258844F57969C1776 /* CDVSpinnerDialog.m */; };
 		E4EA56D7AD144CBF8FAA5239 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769404C2ADC405688571669 /* CDVStatusBar.m */; };
-		94B5BC5CD5CF43A3A9BE3E60 /* claseAuxiliar.mm in Resources */ = {isa = PBXBuildFile; fileRef = 055C40E9ECCA450589AC9576 /* claseAuxiliar.mm */; };
-		389A0B799B4345F59E30DD5E /* TesseractPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A98CCA54904659916EA600 /* TesseractPlugin.m */; };
-		248306CB9BBA4CCC902A091B /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 6FE5F33516884795B12610CF /* tessdata */; };
 		BB9995A2A9B449B696ED4D22 /* CDVBarcodeScanner.mm in Resources */ = {isa = PBXBuildFile; fileRef = 61B9CDEC60FA4D92B88DCF9C /* CDVBarcodeScanner.mm */; };
 		12927B8AD24249D2BC0C7B13 /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 264E2B093AB849AF98308768 /* scannerOverlay.xib */; };
 		0E2B085474114F67BC4B7A15 /* CDVBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B609CD14F0F4821A5F70523 /* CDVBarcodeScanner.bundle */; };
@@ -98,11 +95,6 @@
 		5977C7499B574F59A4F07009 /* CDVSpinnerDialog.h */ = {isa = PBXFileReference; name = "CDVSpinnerDialog.h"; path = "cordova-plugin-spinner-dialog/CDVSpinnerDialog.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		0769404C2ADC405688571669 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		4843008755894B358B647B68 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		055C40E9ECCA450589AC9576 /* claseAuxiliar.mm */ = {isa = PBXFileReference; name = "claseAuxiliar.mm"; path = "cordova-plugin-tesseract/claseAuxiliar.mm"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		75A98CCA54904659916EA600 /* TesseractPlugin.m */ = {isa = PBXFileReference; name = "TesseractPlugin.m"; path = "cordova-plugin-tesseract/TesseractPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		3F8475F104044928B2332C7C /* claseAuxiliar.h */ = {isa = PBXFileReference; name = "claseAuxiliar.h"; path = "cordova-plugin-tesseract/claseAuxiliar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		74616497407645D18C8C8D19 /* TesseractPlugin.h */ = {isa = PBXFileReference; name = "TesseractPlugin.h"; path = "cordova-plugin-tesseract/TesseractPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		6FE5F33516884795B12610CF /* tessdata */ = {isa = PBXFileReference; name = "tessdata"; path = "tessdata"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		61B9CDEC60FA4D92B88DCF9C /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.mm"; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		264E2B093AB849AF98308768 /* scannerOverlay.xib */ = {isa = PBXFileReference; name = "scannerOverlay.xib"; path = "scannerOverlay.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
 		0B609CD14F0F4821A5F70523 /* CDVBarcodeScanner.bundle */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.bundle"; path = "CDVBarcodeScanner.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
@@ -181,7 +173,6 @@
 				8D1107310486CEB800E47090 /* Aeon PM Checklist-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
 				6E759F6356BC4A8A81859A2A /* CDVNotification.bundle */,
-				6FE5F33516884795B12610CF /* tessdata */,
 				264E2B093AB849AF98308768 /* scannerOverlay.xib */,
 				0B609CD14F0F4821A5F70523 /* CDVBarcodeScanner.bundle */,
 			);
@@ -237,10 +228,6 @@
 				5977C7499B574F59A4F07009 /* CDVSpinnerDialog.h */,
 				0769404C2ADC405688571669 /* CDVStatusBar.m */,
 				4843008755894B358B647B68 /* CDVStatusBar.h */,
-				055C40E9ECCA450589AC9576 /* claseAuxiliar.mm */,
-				75A98CCA54904659916EA600 /* TesseractPlugin.m */,
-				3F8475F104044928B2332C7C /* claseAuxiliar.h */,
-				74616497407645D18C8C8D19 /* TesseractPlugin.h */,
 				61B9CDEC60FA4D92B88DCF9C /* CDVBarcodeScanner.mm */,
 			);
 			name = Plugins;
@@ -336,7 +323,6 @@
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
 				05FD71347F7943FA94E4B6F0 /* CDVNotification.bundle in Resources */,
-				248306CB9BBA4CCC902A091B /* tessdata in Resources */,
 				12927B8AD24249D2BC0C7B13 /* scannerOverlay.xib in Resources */,
 				0E2B085474114F67BC4B7A15 /* CDVBarcodeScanner.bundle in Resources */,
 			);
@@ -377,8 +363,6 @@
 				4E2E16ED37DC48FF97953737 /* CDVInAppBrowser.m in Sources */,
 				ED08549D368045FAB0C69327 /* CDVSpinnerDialog.m in Sources */,
 				E4EA56D7AD144CBF8FAA5239 /* CDVStatusBar.m in Sources */,
-				94B5BC5CD5CF43A3A9BE3E60 /* claseAuxiliar.mm in Resources */,
-				389A0B799B4345F59E30DD5E /* TesseractPlugin.m in Sources */,
 				BB9995A2A9B449B696ED4D22 /* CDVBarcodeScanner.mm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
