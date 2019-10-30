@@ -83,7 +83,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-add-swift-support": "2.0.2",
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-inappbrowser": "3.0.0",
